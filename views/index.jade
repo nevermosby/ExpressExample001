@@ -1,0 +1,16 @@
+extends layout
+
+block content
+	h1= title
+	p Welcome to #{title}
+	p #{body}
+	#wrapper
+		h2 Intance List
+		#userList
+			table
+				thead
+					th Instance name
+					th Created date
+					th Status
+					th Action
+					tbody
