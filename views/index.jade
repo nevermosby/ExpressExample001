@@ -1,12 +1,14 @@
 extends layout
 
 block content
-	h1= title
-	p Welcome to #{title}
-	p #{body}
+	// h1= title
+	h1 Welcome to #{title}
+	// p #{body}
 	#wrapper
 		h2 Intance List
-		#userList
+		#createIntance
+			button create
+		#instanceList
 			table
 				thead
 					th Instance name
@@ -14,3 +16,17 @@ block content
 					th Status
 					th Action
 					tbody
+					//
+						for instance in instanceList
+							tr
+								td.name= instance.name
+								td.date= instance.createDate
+								td.status= instance.status
+								td
+									// a(href="#").backup backup
+									// a(href="#").restore restore
+									// a(href="#").rebuild rebuild
+									button.create create
+									button.backup backup
+									button.restore restore
+									button.rebuild rebuild
