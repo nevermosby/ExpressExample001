@@ -5,6 +5,12 @@ $(document).ready(function(){
 
 	populateInstanceList();
 
+	// handle create instance function
+	$('button#create').on('click', function(){
+		//TODO: call api to create openstack instance
+		alert('start to create image instance...');
+	});
+
 	var $instanceListTable = $('#instanceList table'); 
 	
 	// handle backup funtion
